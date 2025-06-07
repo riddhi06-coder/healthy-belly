@@ -53,24 +53,53 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+
+    // protected function validator(array $data)
+    // {
+    //     return Validator::make($data, [
+    //         'first_name' => ['required', 'string', 'max:255'],
+    //         'last_name' => ['required', 'string', 'max:255'],
+    //         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+    //         'contact' => ['required', 'min:10'],
+    //         'password' => ['required', 'string', 'min:8', 'confirmed'],
+    //         'password_confirmation' => ['required', 'min:8'],
+    //     ],[
+    //         'first_name.required' => __('First Name is required.'),
+    //         'last_name.required' => __('Last Name is required.'),
+    //         'email.required' => __('Email is required.'),
+    //         'contact.required' => __('Contact is required.'),
+    //         'password.required' => __('Password is required.'),
+    //         'password_confirmation.required' => __('Confirm Password is required.'),
+    //     ]);
+    // }
+
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'contact' => ['required', 'min:10'],
+            'contact' => ['required', 'digits:10'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'password_confirmation' => ['required', 'min:8'],
-        ],[
-            'first_name.required' => __('First Name is required.'),
-            'last_name.required' => __('Last Name is required.'),
-            'email.required' => __('Email is required.'),
-            'contact.required' => __('Contact is required.'),
-            'password.required' => __('Password is required.'),
-            'password_confirmation.required' => __('Confirm Password is required.'),
+        ], [
+            'first_name.required' => 'First Name is required.',
+            'last_name.required' => 'Last Name is required.',
+            'email.required' => 'Email is required.',
+            'email.email' => 'Email must be a valid email address.',
+            'email.unique' => 'This email is already registered.',
+            'contact.required' => 'Contact number is required.',
+            'contact.digits' => 'Contact number must be exactly 10 digits.',
+            'password.required' => 'Password is required.',
+            'password.min' => 'Password must be at least 8 characters.',
+            'password.confirmed' => 'Passwords do not match.',
         ]);
     }
+
+
+
+
 
     /**
      * Create a new user instance after a valid registration.
@@ -78,24 +107,39 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
+
+
+    // protected function create(array $data)
+    // {
+    //     return Validator::make($data, [
+    //         'first_name' => ['required', 'string', 'max:255'],
+    //         'last_name' => ['required', 'string', 'max:255'],
+    //         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+    //         'contact' => ['required', 'min:10'],
+    //         'password' => ['required', 'string', 'min:8', 'confirmed'],
+    //         'password_confirmation' => ['required', 'min:8'],
+    //     ],[
+    //         'first_name.required' => __('First Name is required.'),
+    //         'last_name.required' => __('Last Name is required.'),
+    //         'email.required' => __('Email is required.'),
+    //         'contact.required' => __('Contact is required.'),
+    //         'password.required' => __('Password is required.'),
+    //         'password_confirmation.required' => __('Confirm Password is required.'),
+    //     ]);
+    // }
+
+
     protected function create(array $data)
     {
-        return Validator::make($data, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'contact' => ['required', 'min:10'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'password_confirmation' => ['required', 'min:8'],
-        ],[
-            'first_name.required' => __('First Name is required.'),
-            'last_name.required' => __('Last Name is required.'),
-            'email.required' => __('Email is required.'),
-            'contact.required' => __('Contact is required.'),
-            'password.required' => __('Password is required.'),
-            'password_confirmation.required' => __('Confirm Password is required.'),
+        return User::create([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'contact' => $data['contact'],
+            'password' => Hash::make($data['password']),
         ]);
     }
+
 
     public function showAdminRegisterForm()
     {

@@ -88,7 +88,7 @@ Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
 Route::post('/register/staffmember', 'Auth\RegisterController@createStaffmember');
 
 Route::view('/home', 'home')->middleware('auth');
-Route::get('/test/admin', 'AdminController@admin_dashboard')->name('admin_dashboard');
+Route::get('/admin', 'AdminController@admin_dashboard')->name('admin_dashboard');
 Route::get('/staffmember', 'StaffController@staffmember_dashboard')->name('staffmember_dashboard');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

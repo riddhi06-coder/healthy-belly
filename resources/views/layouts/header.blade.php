@@ -86,7 +86,7 @@
               <div class="icon-box-icon">
                          <?php if(Auth::guard('web')->check()){ ?>
             <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{ asset('public/User.svg')}}"> </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{ asset('User.svg')}}"> </a>
             <span style="color:white;">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
             <ul class="dropdown-menu">
             <li><a href="{{route('user_dashboard')}}">Dashboard</a></li>
