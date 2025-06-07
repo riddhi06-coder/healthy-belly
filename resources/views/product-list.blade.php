@@ -89,16 +89,16 @@
                     <?php } ?>
                     <div class="product-img">
                       <a href="{{route('product_detail')}}/{{$all_products->slug}}">
-                      <img src="{{asset('public/frontend/images/product')}}/{{$all_products->image}}" alt="Product Image" class="w-100">
+                      <img src="{{asset('frontend/images/product')}}/{{$all_products->image}}" alt="Product Image" class="w-100">
                       </a>
                       <a href="{{route('product_detail')}}/{{$all_products->slug}}">
-                      <img src="{{asset('public/frontend/images/product')}}/{{$all_products->image}}" alt="Product Image" class="w-100 img_swap">
+                      <img src="{{asset('frontend/images/product')}}/{{$all_products->image}}" alt="Product Image" class="w-100 img_swap">
                       </a>
                     </div>
                     <div class="product-content">
                       <div class="actions-btn">
                       <?php if(isset($variant_prod_id)){ ?>
-                        <a class="add_to_wishlist" data-id="{{$all_products->id}}" data-variant="{{$variant_prod_id->id}}"><img src="{{asset('public/frontend/images/svg/heart-black.svg')}}"></a> 
+                        <a class="add_to_wishlist" data-id="{{$all_products->id}}" data-variant="{{$variant_prod_id->id}}"><img src="{{asset('frontend/images/svg/heart-black.svg')}}"></a> 
                       <?php } ?>
 
                       </div>
@@ -222,16 +222,16 @@
                             ${product.new_arrival ? '<div class="product-tag1">New</div>' : ''}
                             <div class="product-img">
                                 <a href="{{route('product_detail', '')}}/${product.slug}">
-                                    <img src="{{asset('public/frontend/images/product')}}/${product.image}" alt="Product Image" class="w-100">
+                                    <img src="{{asset('frontend/images/product')}}/${product.image}" alt="Product Image" class="w-100">
                                 </a>
                                 <a href="{{route('product_detail', '')}}/${product.slug}">
-                                    <img src="{{asset('public/frontend/images/product')}}/${product.image}" alt="Product Image" class="w-100 img_swap">
+                                    <img src="{{asset('frontend/images/product')}}/${product.image}" alt="Product Image" class="w-100 img_swap">
                                 </a>
                             </div>
                             <div class="product-content">
                                 <div class="actions-btn">
                                     <a class="add_to_wishlist" data-id="${product.id}" data-variant="${product.variant_id}">
-                                        <img src="{{asset('public/frontend/images/svg/heart-black.svg')}}">
+                                        <img src="{{asset('frontend/images/svg/heart-black.svg')}}">
                                     </a>
                                 </div>
                                 <h4 class="product-title">

@@ -90,16 +90,16 @@
         <div class="insize">
         <div class="product-thumbnail-slider">
         <ul id="products-gallery" class="thumbnail_slider_img  list-unstyled cS-hidden">
-            <li data-thumb="{{asset('public/frontend/images/product')}}/{{$product_detail->image}}"> 
-                <a data-fancybox="gallery" href="{{asset('public/frontend/images/product')}}/{{$product_detail->image}}">
-                <img class="img-responsive" src="{{asset('public/frontend/images/product')}}/{{$product_detail->image}}" />
+            <li data-thumb="{{asset('frontend/images/product')}}/{{$product_detail->image}}"> 
+                <a data-fancybox="gallery" href="{{asset('frontend/images/product')}}/{{$product_detail->image}}">
+                <img class="img-responsive" src="{{asset('frontend/images/product')}}/{{$product_detail->image}}" />
                 </a>
             </li>
             <?php if($product_image->count()>0){ ?>
             @foreach($product_image as $product_images)
-            <li data-thumb="{{asset('public/frontend/images/productImage')}}/{{$product_images->image}}"> 
-                <a data-fancybox="gallery" href="{{asset('public/frontend/images/productImage')}}/{{$product_images->image}}">
-                <img class="img-responsive" src="{{asset('public/frontend/images/productImage')}}/{{$product_images->image}}" />
+            <li data-thumb="{{asset('frontend/images/productImage')}}/{{$product_images->image}}"> 
+                <a data-fancybox="gallery" href="{{asset('frontend/images/productImage')}}/{{$product_images->image}}">
+                <img class="img-responsive" src="{{asset('frontend/images/productImage')}}/{{$product_images->image}}" />
                 </a>
             </li>
             @endforeach
@@ -128,7 +128,7 @@
             <div class="add-to-wishlist">
                 <div class="wishlist-icon">
                 <?php if(isset($variant_prod_id)){ ?>
-                    <a class="add_to_wishlist" data-id="{{$product_detail->id}}" data-variant="{{$variant_prod_id->id}}"><img src="{{asset('public/frontend/images/svg/heart-white.svg')}}" class="img-responsive" title="Add To wishlist"></a>
+                    <a class="add_to_wishlist" data-id="{{$product_detail->id}}" data-variant="{{$variant_prod_id->id}}"><img src="{{asset('frontend/images/svg/heart-white.svg')}}" class="img-responsive" title="Add To wishlist"></a>
                 <?php } ?>
                 </div>
             </div>
@@ -291,19 +291,19 @@
             <?php } ?>
             <div class="product-img">
             <a href="{{route('product_detail')}}/{{$related_products->slug}}">
-            <img src="{{asset('public/frontend/images/product')}}/{{$related_products->image}}" alt="Product Image" class="w-100">
+            <img src="{{asset('frontend/images/product')}}/{{$related_products->image}}" alt="Product Image" class="w-100">
             </a>
             <a href="{{route('product_detail')}}/{{$related_products->slug}}">
-            <img src="{{asset('public/frontend/images/product')}}/{{$related_products->image}}" alt="Product Image" class="w-100 img_swap">
+            <img src="{{asset('frontend/images/product')}}/{{$related_products->image}}" alt="Product Image" class="w-100 img_swap">
             </a>
             </div>
             <div class="product-content">
             <div class="actions-btn">
             <?php if(isset($variant_prod_id)){ ?>
-                <a class="add_to_wishlist" data-id="{{$related_products->id}}" data-variant="{{$variant_prod_id->id}}"><img src="{{asset('public/frontend/images/svg/heart-black.svg')}}"></a> 
+                <a class="add_to_wishlist" data-id="{{$related_products->id}}" data-variant="{{$variant_prod_id->id}}"><img src="{{asset('frontend/images/svg/heart-black.svg')}}"></a> 
             <?php } ?>
-                <!-- <a href="#"><img src="{{asset('public/frontend/images/svg/cart-black.svg')}}"></a> 
-                <a href="#"><img src="{{asset('public/frontend/images/svg/view-black.svg')}}"></a>  -->
+                <!-- <a href="#"><img src="{{asset('frontend/images/svg/cart-black.svg')}}"></a> 
+                <a href="#"><img src="{{asset('frontend/images/svg/view-black.svg')}}"></a>  -->
             </div>
             
             <?php
