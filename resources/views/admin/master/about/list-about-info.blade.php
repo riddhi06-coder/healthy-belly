@@ -56,7 +56,7 @@
 									<tr>
 										<td>{{$key+1}}</td>
 										<td>{!!$value->description!!}</td>
-										<td><img src="{{ asset('public/about/'.$value->image)}}" height="200" width="200"></td>
+										<td><img src="{{ asset('about/'.$value->image)}}" height="200" width="200"></td>
                                         @if($value->status == 1)
                                         <td>
                                         <div class="form-check form-switch form-check-warning">

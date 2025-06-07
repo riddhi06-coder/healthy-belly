@@ -54,7 +54,7 @@
                                     @foreach($data as $value)
 									<tr>
 										<td>{{$value->title}}</td>
-										<td><img src="{{ asset('public/about/'.$value->about_image)}}" height="200" width="200"></td>
+										<td><img src="{{ asset('about/'.$value->about_image)}}" height="200" width="200"></td>
                                         <td>{{$value->count}}</td>
                                         <td>
                                             <a href="{{route('about.edit_about_count_detail')}}/{{$value->id}}" class="btn btn-info">edit</a>

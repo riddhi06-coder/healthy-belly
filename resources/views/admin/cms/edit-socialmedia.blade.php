@@ -41,7 +41,7 @@
                                     {{-- <input type="hidden" name="old_logo" value="{{$social_media->logo}}"> --}}
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    {{-- <img id="doctorimg" src="{{asset('public/frontend/images/social-media').'/'.$social_media->logo}}"> --}}
+                                    {{-- <img id="doctorimg" src="{{asset('frontend/images/social-media').'/'.$social_media->logo}}"> --}}
                                 </div>
                             </div>
 

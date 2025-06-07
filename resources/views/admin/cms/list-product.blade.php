@@ -38,7 +38,7 @@
                             <tr>
                                 <td>{{$i++}}</td>
                                 
-                                <td>{{$product_details->product_name}} <img id="doctorimg" src="{{asset('public/frontend/images/product')}}/{{$product_details->image}}"></td>
+                                <td>{{$product_details->product_name}} <img id="doctorimg" src="{{asset('frontend/images/product')}}/{{$product_details->image}}"></td>
                                 
                                 <td>
                                 <?php $m_cat=DB::table('parent_category')->where('id',$product_details->parent_cat)->first(); ?>

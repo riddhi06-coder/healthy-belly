@@ -38,7 +38,7 @@
                                     <input type="hidden" id="old_image" name="old_image" value="{{$about_detail->image}}">
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <img id="doctorimg" src="{{asset('public/frontend/images/aboutus').'/'.$about_detail->image}}">
+                                    <img id="doctorimg" src="{{asset('/frontend/images/aboutus').'/'.$about_detail->image}}">
                                 </div>
                             </div>
 						</div>

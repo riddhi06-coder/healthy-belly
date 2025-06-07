@@ -30,8 +30,8 @@
 							<tr>
 								<td>{{$i++}}</td>
 								<td>{{$fetch_banner_details->title}}</td>
-								<td><img id="doctorimg" src="{{asset('public/frontend/images/banner').'/'.$fetch_banner_details->image}}"></td>
-								<td><img id="doctorimg" src="{{asset('public/frontend/images/xsbanner').'/'.$fetch_banner_details->xs_image}}"></td>
+								<td><img id="doctorimg" src="{{asset('frontend/images/banner').'/'.$fetch_banner_details->image}}"></td>
+								<td><img id="doctorimg" src="{{asset('frontend/images/xsbanner').'/'.$fetch_banner_details->xs_image}}"></td>
 								<td>
 									<input data-id="{{$fetch_banner_details->id}}" class="toggle-class bannerToggle" data-size="mini" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $fetch_banner_details->status ? 'checked' : '' }}>
 								</td>

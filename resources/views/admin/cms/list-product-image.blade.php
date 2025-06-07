@@ -36,7 +36,7 @@
                                 ?>
                                 {{$product_name->product_name}}</td>
                                 <td>
-                                    <img id="doctorimg" src="{{asset('public/frontend/images/productImage')}}/{{$image_details->image}}">
+                                    <img id="doctorimg" src="{{asset('frontend/images/productImage')}}/{{$image_details->image}}">
                                 </td>
                                 <td>
                                     <input data-id="{{$image_details->id}}" class="toggle-class productImageToggle" data-size="mini" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $image_details->status ? 'checked' : '' }}>

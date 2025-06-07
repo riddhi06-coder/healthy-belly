@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label for="inputContact" class="control-label">Current Image</label>
-                                    <img id="doctorimg" src="{{asset('public/frontend/images/banner')}}/{{$banner_detail->image}}" >
+                                    <img id="doctorimg" src="{{asset('frontend/images/banner')}}/{{$banner_detail->image}}" >
                                 </div>
                             </div>
                             <div class="row">
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label for="inputContact" class="control-label">Current Xs-Image</label>
-                                    <img id="doctorimg" src="{{asset('public/frontend/images/xsbanner')}}/{{$banner_detail->xs_image}}" >
+                                    <img id="doctorimg" src="{{asset('frontend/images/xsbanner')}}/{{$banner_detail->xs_image}}" >
                                 </div>
                             </div>
                         </div>

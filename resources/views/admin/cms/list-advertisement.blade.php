@@ -34,7 +34,7 @@
                                 <td>{{$i++}}</td>
 								<td>{!!$ad_details->title!!}</td>
                                 <td>
-                                    <img id="doctorimg" src="{{asset('public/frontend/images/advertisement')}}/{{$ad_details->image}}">
+                                    <img id="doctorimg" src="{{asset('frontend/images/advertisement')}}/{{$ad_details->image}}">
                                 </td>
                                 <td>
                                     <input data-id="{{$ad_details->id}}" class="toggle-class advertisementToggle" data-size="mini" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $ad_details->status ? 'checked' : '' }}>

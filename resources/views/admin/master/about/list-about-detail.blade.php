@@ -57,7 +57,7 @@
 									<tr>
 										<td>{{$value->title}}</td>
 										<td>{!!$value->description!!}</td>
-										<td><img src="{{ asset('public/about/'.$value->about_image)}}" height="200" width="200"></td>
+										<td><img src="{{ asset('about/'.$value->about_image)}}" height="200" width="200"></td>
                                         <td>{{$value->year_count}}</td>
                                         <td>{{$value->operator}}</td>
                                         <td>

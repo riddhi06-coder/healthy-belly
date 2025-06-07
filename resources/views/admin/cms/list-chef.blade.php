@@ -36,7 +36,7 @@
 								<td>{{$chef_details->name}}</td>
                                 <td>{{$chef_details->profession}}</td>
                                 <td>
-                                    <img id="doctorimg" src="{{asset('public/frontend/images/chef')}}/{{$chef_details->image}}">
+                                    <img id="doctorimg" src="{{asset('frontend/images/chef')}}/{{$chef_details->image}}">
                                 </td>
                                 <td>
                                     <input data-id="{{$chef_details->id}}" class="toggle-class chefToggle" data-size="mini" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $chef_details->status ? 'checked' : '' }}>

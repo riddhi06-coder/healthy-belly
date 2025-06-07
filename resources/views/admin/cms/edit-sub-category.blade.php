@@ -41,7 +41,7 @@
                                     <td><label for="inputName" class="control-label">Current Image : </label>
                                     <input type="hidden" name="old_image" value="{{$cat_detail->image}}" >
                                     <input type="hidden" name="id" value="{{$cat_detail->id}}" >
-                                    <img id="doctorimg" src="{{asset('public/frontend/images/subCategory')}}/{{$cat_detail->image}}">
+                                    <img id="doctorimg" src="{{asset('frontend/images/subCategory')}}/{{$cat_detail->image}}">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>

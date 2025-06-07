@@ -38,7 +38,7 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <img id="doctorimg" src="{{asset('public/frontend/images/product/')}}/{{$product_detail->image}}">
+                                    <img id="doctorimg" src="{{asset('frontend/images/product/')}}/{{$product_detail->image}}">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
