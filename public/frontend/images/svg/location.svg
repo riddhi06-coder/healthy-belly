@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25">
+	<title>location-pin-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ec008c } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="shp0" d="M21.88 9.44C21.88 16.84 13.38 24.48 13.02 24.8C12.87 24.93 12.69 25 12.5 25C12.31 25 12.13 24.93 11.98 24.8C11.62 24.48 3.13 16.84 3.13 9.44C3.13 4.24 7.33 0 12.5 0C17.67 0 21.88 4.24 21.88 9.44ZM17.71 9.38C17.71 6.5 15.37 4.17 12.5 4.17C9.63 4.17 7.29 6.5 7.29 9.38C7.29 12.25 9.63 14.58 12.5 14.58C15.37 14.58 17.71 12.25 17.71 9.38Z" />
+	</g>
+</svg>

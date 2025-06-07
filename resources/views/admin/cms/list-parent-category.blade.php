@@ -1,0 +1,59 @@
+@extends('layouts.header-admin')
+@section('content')
+<div id="wrapper">
+	<div class="main-content">
+		<div class="row small-spacing">
+			<div class="col-xs-12">
+				<div class="box-content">
+                    @if(Session()->has('success'))
+                        <div class="alert alert-success">
+                            {{session()->get('success')}}
+                        </div>
+                    @endif
+					<h4 class="box-title">List Parent Category</h4>
+					<!-- /.box-title -->
+					<div class="dropdown js__drop_down">
+						<a href="{{route('admin.add_parent_category')}}"><input type="submit" name="" value="Add Main Category" class="btn btn-success btn-sm"></a>
+
+						<!-- /.sub-menu -->
+					</div>
+					<!-- /.dropdown js__dropdown -->
+					<table id="listProductCategory" class="table table-striped table-bordered display" style="width:100%">
+						<thead>
+							<tr>
+                                <th>Sr No.</th>
+								<th>Category Name</th>
+                                <th>Slug</th>
+                                <th>Status</th>
+								<th>::</th>
+							</tr>
+						</thead>
+						<tbody>
+                            @foreach($parent_cat as $parent_cats)
+							<tr>
+                                <td>{{$i++}}</td>
+								<td>{{$parent_cats->category_name}}</td>
+                                <td>{{$parent_cats->slug}}</td>
+                                <td>
+                                    <input data-id="{{$parent_cats->id}}" class="toggle-class parentCategoryToggle" data-size="mini" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $parent_cats->status ? 'checked' : '' }}>
+                                </td>
+								<td>
+                                    <a href="{{route('admin.edit_parent_category',$parent_cats->id)}}"><button class="btn btn-info btn-xs"><i class="fa fa-edit"></i></button></a>
+                                    <a onclick="return confirm('Are you sure Want to Delete?')" href="{{route('admin.delete_parent_category',$parent_cats->id)}}"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></a>
+                                </td>
+                            </tr>
+                            @endforeach
+						</tbody>
+					</table>
+					{{$parent_cat->links()}}
+				</div>
+				<!-- /.box-content -->
+			</div>
+			<!-- /.col-xs-12 -->
+		</div>
+		<!-- /.row small-spacing -->
+	</div>
+	<!-- /.main-content -->
+</div>
+
+@endsection
