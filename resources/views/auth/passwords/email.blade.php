@@ -71,7 +71,7 @@ $wishlist_count=DB::table('wishlists')->where('ip_address',$ip_address)->where('
             <form method="POST" action='{{ route("login", $url) }}'>
             @else
             <form method="POST" action="{{ route('password.email') }}">
-            @endisset
+        @endisset
                 @csrf
                 
                 <div class="form-group">
@@ -91,13 +91,12 @@ $wishlist_count=DB::table('wishlists')->where('ip_address',$ip_address)->where('
                         </button>
                   </div>
                 </div>
-              
             </form>
           </div>
         </div>
         <div class="col-md-6">
           <div class="sign-img">
-            <img src="{{asset('public/frontend/images/healthy_belly_login_page_banner.png')}}" class="img-responsive" alt="The Healthy Belly">
+            <img src="{{asset('/frontend/images/healthy_belly_login_page_banner.png')}}" class="img-responsive" alt="The Healthy Belly">
           </div>
         </div>
       </div>

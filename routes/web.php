@@ -95,113 +95,113 @@ Route::get('/staffmember', 'StaffController@staffmember_dashboard')->name('staff
 
 // admin routes
 Route::group(['middleware'=>['protectedPage']],function(){ 
-Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
-    // shop details routes
-    Route::get('shop-details','Admin\CmsController@shop_details')->name('shop_details');
-    Route::post('shop-details','Admin\CmsController@update_shop_details')->name('update_shop_details');
+  Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
+      // shop details routes
+      Route::get('shop-details','Admin\CmsController@shop_details')->name('shop_details');
+      Route::post('shop-details','Admin\CmsController@update_shop_details')->name('update_shop_details');
 
-    // Home page banner routes
-    Route::get('list-banners','Admin\CmsController@list_banner')->name('list_banner');
-    Route::get('add-banners','Admin\CmsController@add_banner')->name('add_banner');
-    Route::post('save-banners','Admin\CmsController@save_banner')->name('save_banner');
-    Route::get('edit-banners/{id?}','Admin\CmsController@edit_banner')->name('edit_banner');
-    Route::post('update-banners/{id?}','Admin\CmsController@update_banner')->name('update_banner');
-    Route::get('delete-banners/{id?}','Admin\CmsController@delete_banner')->name('delete_banner');
-    Route::get('banners-status','Admin\CmsController@banner_status')->name('banner_status');
+      // Home page banner routes
+      Route::get('list-banners','Admin\CmsController@list_banner')->name('list_banner');
+      Route::get('add-banners','Admin\CmsController@add_banner')->name('add_banner');
+      Route::post('save-banners','Admin\CmsController@save_banner')->name('save_banner');
+      Route::get('edit-banners/{id?}','Admin\CmsController@edit_banner')->name('edit_banner');
+      Route::post('update-banners/{id?}','Admin\CmsController@update_banner')->name('update_banner');
+      Route::get('delete-banners/{id?}','Admin\CmsController@delete_banner')->name('delete_banner');
+      Route::get('banners-status','Admin\CmsController@banner_status')->name('banner_status');
 
-    //Social Media routes
-    Route::get('list-socialMedia','Admin\CmsController@list_socialmedia')->name('list_socialmedia');
-    Route::get('edit-socialMedia/{id?}','Admin\CmsController@edit_socialmedia')->name('edit_socialmedia');
-    Route::post('update-socialMedia/{id?}','Admin\CmsController@update_socialmedia')->name('update_socialmedia');
-    Route::get('delete-socialMedia/{id?}','Admin\CmsController@delete_socialmedia')->name('delete_socialmedia');
-    Route::get('socialMedia-status','Admin\CmsController@socialmedia_status')->name('socialmedia_status');
+      //Social Media routes
+      Route::get('list-socialMedia','Admin\CmsController@list_socialmedia')->name('list_socialmedia');
+      Route::get('edit-socialMedia/{id?}','Admin\CmsController@edit_socialmedia')->name('edit_socialmedia');
+      Route::post('update-socialMedia/{id?}','Admin\CmsController@update_socialmedia')->name('update_socialmedia');
+      Route::get('delete-socialMedia/{id?}','Admin\CmsController@delete_socialmedia')->name('delete_socialmedia');
+      Route::get('socialMedia-status','Admin\CmsController@socialmedia_status')->name('socialmedia_status');
 
-    // Parent category routes
-    Route::get('list-parent-category','Admin\ProductController@list_parent_category')->name('list_parent_category');
-    Route::get('add-parent-category','Admin\ProductController@add_parent_category')->name('add_parent_category');
-    Route::post('save-parent-category','Admin\ProductController@save_parent_category')->name('save_parent_category');
-    Route::get('edit-parent-category/{id?}','Admin\ProductController@edit_parent_category')->name('edit_parent_category');
-    Route::post('update-parent-category','Admin\ProductController@update_parent_category')->name('update_parent_category');
-    Route::get('delete-parent-category/{id?}','Admin\ProductController@delete_parent_category')->name('delete_parent_category');
-    Route::get('parent-category-status','Admin\ProductController@parent_category_status')->name('parent_category_status');
+      // Parent category routes
+      Route::get('list-parent-category','Admin\ProductController@list_parent_category')->name('list_parent_category');
+      Route::get('add-parent-category','Admin\ProductController@add_parent_category')->name('add_parent_category');
+      Route::post('save-parent-category','Admin\ProductController@save_parent_category')->name('save_parent_category');
+      Route::get('edit-parent-category/{id?}','Admin\ProductController@edit_parent_category')->name('edit_parent_category');
+      Route::post('update-parent-category','Admin\ProductController@update_parent_category')->name('update_parent_category');
+      Route::get('delete-parent-category/{id?}','Admin\ProductController@delete_parent_category')->name('delete_parent_category');
+      Route::get('parent-category-status','Admin\ProductController@parent_category_status')->name('parent_category_status');
 
-    // Sub category routes
-    Route::get('list-sub-category','Admin\ProductController@list_sub_category')->name('list_sub_category');
-    Route::get('add-sub-category','Admin\ProductController@add_sub_category')->name('add_sub_category');
-    Route::post('save-sub-category','Admin\ProductController@save_sub_category')->name('save_sub_category');
-    Route::get('edit-sub-category/{id?}','Admin\ProductController@edit_sub_category')->name('edit_sub_category');
-    Route::post('update-sub-category','Admin\ProductController@update_sub_category')->name('update_sub_category');
-    Route::get('delete-sub-category/{id?}','Admin\ProductController@delete_sub_category')->name('delete_sub_category');
-    Route::get('sub-category-status','Admin\ProductController@sub_category_status')->name('sub_category_status');
+      // Sub category routes
+      Route::get('list-sub-category','Admin\ProductController@list_sub_category')->name('list_sub_category');
+      Route::get('add-sub-category','Admin\ProductController@add_sub_category')->name('add_sub_category');
+      Route::post('save-sub-category','Admin\ProductController@save_sub_category')->name('save_sub_category');
+      Route::get('edit-sub-category/{id?}','Admin\ProductController@edit_sub_category')->name('edit_sub_category');
+      Route::post('update-sub-category','Admin\ProductController@update_sub_category')->name('update_sub_category');
+      Route::get('delete-sub-category/{id?}','Admin\ProductController@delete_sub_category')->name('delete_sub_category');
+      Route::get('sub-category-status','Admin\ProductController@sub_category_status')->name('sub_category_status');
 
-    // products routes
-    Route::get('list-product','Admin\ProductController@list_product')->name('list_product');
-    Route::get('add-product','Admin\ProductController@add_product')->name('add_product');
-    Route::post('save-product','Admin\ProductController@save_product')->name('save_product');
-    Route::get('edit-product/{id?}','Admin\ProductController@edit_product')->name('edit_product');
-    Route::post('update-product','Admin\ProductController@update_product')->name('update_product');
-    Route::get('delete-product/{id?}','Admin\ProductController@delete_product')->name('delete_product');
-    Route::get('product-status','Admin\ProductController@product_status')->name('product_status');
-    Route::get('product-bestseller-status','Admin\ProductController@product_bestseller_status')->name('product_bestseller_status');
-    Route::get('product-newarrival-status','Admin\ProductController@product_newarrival_status')->name('product_newarrival_status');
-    Route::get('product-available-status','Admin\ProductController@product_available_status')->name('product_available_status');
+      // products routes
+      Route::get('list-product','Admin\ProductController@list_product')->name('list_product');
+      Route::get('add-product','Admin\ProductController@add_product')->name('add_product');
+      Route::post('save-product','Admin\ProductController@save_product')->name('save_product');
+      Route::get('edit-product/{id?}','Admin\ProductController@edit_product')->name('edit_product');
+      Route::post('update-product','Admin\ProductController@update_product')->name('update_product');
+      Route::get('delete-product/{id?}','Admin\ProductController@delete_product')->name('delete_product');
+      Route::get('product-status','Admin\ProductController@product_status')->name('product_status');
+      Route::get('product-bestseller-status','Admin\ProductController@product_bestseller_status')->name('product_bestseller_status');
+      Route::get('product-newarrival-status','Admin\ProductController@product_newarrival_status')->name('product_newarrival_status');
+      Route::get('product-available-status','Admin\ProductController@product_available_status')->name('product_available_status');
 
-    Route::get('get-product-sub-category/{id?}','Admin\ProductController@get_product_sub_category')->name('get_product_sub_category');
+      Route::get('get-product-sub-category/{id?}','Admin\ProductController@get_product_sub_category')->name('get_product_sub_category');
 
-    // Home Advertisement routes
-    Route::get('list-advertisement','Admin\CmsController@list_advertisement')->name('list_advertisement');
-    Route::get('add-advertisement','Admin\CmsController@add_advertisement')->name('add_advertisement');
-    Route::post('save-advertisement','Admin\CmsController@save_advertisement')->name('save_advertisement');
-    Route::get('edit-advertisement/{id?}','Admin\CmsController@edit_advertisement')->name('edit_advertisement');
-    Route::post('update-advertisement','Admin\CmsController@update_advertisement')->name('update_advertisement');
-    Route::get('delete-advertisement/{id?}','Admin\CmsController@delete_advertisement')->name('delete_advertisement');
-    Route::get('advertisement-status','Admin\CmsController@advertisement_status')->name('advertisement_status');
+      // Home Advertisement routes
+      Route::get('list-advertisement','Admin\CmsController@list_advertisement')->name('list_advertisement');
+      Route::get('add-advertisement','Admin\CmsController@add_advertisement')->name('add_advertisement');
+      Route::post('save-advertisement','Admin\CmsController@save_advertisement')->name('save_advertisement');
+      Route::get('edit-advertisement/{id?}','Admin\CmsController@edit_advertisement')->name('edit_advertisement');
+      Route::post('update-advertisement','Admin\CmsController@update_advertisement')->name('update_advertisement');
+      Route::get('delete-advertisement/{id?}','Admin\CmsController@delete_advertisement')->name('delete_advertisement');
+      Route::get('advertisement-status','Admin\CmsController@advertisement_status')->name('advertisement_status');
 
-    //Testimonial routes
-    Route::get('list-Testimonial','Admin\CmsController@list_testimonial')->name('list_testimonial');
-    Route::get('add-Testimonial','Admin\CmsController@add_testimonial')->name('add_testimonial');
-    Route::post('Save-Testimonial','Admin\CmsController@save_testimonial')->name('save_testimonial');
-    Route::get('delete-Testimonial/{id?}','Admin\CmsController@delete_testimonial')->name('delete_testimonial');
+      //Testimonial routes
+      Route::get('list-Testimonial','Admin\CmsController@list_testimonial')->name('list_testimonial');
+      Route::get('add-Testimonial','Admin\CmsController@add_testimonial')->name('add_testimonial');
+      Route::post('Save-Testimonial','Admin\CmsController@save_testimonial')->name('save_testimonial');
+      Route::get('delete-Testimonial/{id?}','Admin\CmsController@delete_testimonial')->name('delete_testimonial');
 
-    //Product Image routes
-    Route::get('list-Product-Image','Admin\ProductController@list_product_image')->name('list_product_image');
-    Route::get('add-Product-Image','Admin\ProductController@add_product_image')->name('add_product_image');
-    Route::post('Save-Product-Image','Admin\ProductController@save_product_image')->name('save_product_image');
-    Route::get('delete-Product-Image/{id?}','Admin\ProductController@delete_product_image')->name('delete_product_image');
-    Route::get('product-image-status','Admin\ProductController@product_image_status')->name('product_image_status');
+      //Product Image routes
+      Route::get('list-Product-Image','Admin\ProductController@list_product_image')->name('list_product_image');
+      Route::get('add-Product-Image','Admin\ProductController@add_product_image')->name('add_product_image');
+      Route::post('Save-Product-Image','Admin\ProductController@save_product_image')->name('save_product_image');
+      Route::get('delete-Product-Image/{id?}','Admin\ProductController@delete_product_image')->name('delete_product_image');
+      Route::get('product-image-status','Admin\ProductController@product_image_status')->name('product_image_status');
 
-    // About us Routes
-    Route::get('About-Us','Admin\CmsController@about_us')->name('about_us');
-    Route::post('Update-About-Us','Admin\CmsController@update_about_us')->name('update_about_us');
+      // About us Routes
+      Route::get('About-Us','Admin\CmsController@about_us')->name('about_us');
+      Route::post('Update-About-Us','Admin\CmsController@update_about_us')->name('update_about_us');
 
-    //Product Variant routes
-    Route::get('list-Product-Variant','Admin\ProductController@list_product_variant')->name('list_product_variant');
-    Route::get('add-Product-Variant','Admin\ProductController@add_product_variant')->name('add_product_variant');
-    Route::post('Save-Product-Variant','Admin\ProductController@save_product_variant')->name('save_product_variant');
-    Route::get('Edit-Product-Variant/{id?}','Admin\ProductController@edit_product_variant')->name('edit_product_variant');
-    Route::post('Update-Product-Variant','Admin\ProductController@update_product_variant')->name('update_product_variant');
-    Route::get('Delete-Product-Variant/{id?}','Admin\ProductController@delete_product_variant')->name('delete_product_variant');
-    Route::get('product-variant-status','Admin\ProductController@product_variant_status')->name('product_variant_status');
+      //Product Variant routes
+      Route::get('list-Product-Variant','Admin\ProductController@list_product_variant')->name('list_product_variant');
+      Route::get('add-Product-Variant','Admin\ProductController@add_product_variant')->name('add_product_variant');
+      Route::post('Save-Product-Variant','Admin\ProductController@save_product_variant')->name('save_product_variant');
+      Route::get('Edit-Product-Variant/{id?}','Admin\ProductController@edit_product_variant')->name('edit_product_variant');
+      Route::post('Update-Product-Variant','Admin\ProductController@update_product_variant')->name('update_product_variant');
+      Route::get('Delete-Product-Variant/{id?}','Admin\ProductController@delete_product_variant')->name('delete_product_variant');
+      Route::get('product-variant-status','Admin\ProductController@product_variant_status')->name('product_variant_status');
 
-    //Chefs Routes
-    Route::get('List-Best-chefs','Admin\CmsController@list_best_chef')->name('list_best_chef');
-    Route::get('Add-Best-chefs','Admin\CmsController@add_best_chef')->name('add_best_chef');
-    Route::post('save-Best-chefs','Admin\CmsController@save_best_chef')->name('save_best_chef');
-    Route::get('chef-status','Admin\CmsController@chef_status')->name('chef_status');
-    Route::get('Chef-Delete/{id?}','Admin\CmsController@delete_chef')->name('delete_chef');
+      //Chefs Routes
+      Route::get('List-Best-chefs','Admin\CmsController@list_best_chef')->name('list_best_chef');
+      Route::get('Add-Best-chefs','Admin\CmsController@add_best_chef')->name('add_best_chef');
+      Route::post('save-Best-chefs','Admin\CmsController@save_best_chef')->name('save_best_chef');
+      Route::get('chef-status','Admin\CmsController@chef_status')->name('chef_status');
+      Route::get('Chef-Delete/{id?}','Admin\CmsController@delete_chef')->name('delete_chef');
 
-    //Review Routes
-    Route::get('All-Reviews','Admin\CmsController@all_review')->name('all_review');
-    Route::get('Review-status','Admin\CmsController@review_status')->name('review_status');
-    Route::get('delete-reviews/{id?}','Admin\CmsController@delete_review')->name('delete_review');
+      //Review Routes
+      Route::get('All-Reviews','Admin\CmsController@all_review')->name('all_review');
+      Route::get('Review-status','Admin\CmsController@review_status')->name('review_status');
+      Route::get('delete-reviews/{id?}','Admin\CmsController@delete_review')->name('delete_review');
 
-    Route::get('User-Enquiry','Admin\CmsController@user_enquiry')->name('user_enquiry');
+      Route::get('User-Enquiry','Admin\CmsController@user_enquiry')->name('user_enquiry');
 
-    //Order Management
-    Route::get('list-all-order','Admin\CmsController@list_all_order')->name('list_all_order');
-    Route::post('update-order-status','Admin\CmsController@update_order_status')->name('update_order_status');
-    Route::get('order-description/{id?}','Admin\CmsController@order_description')->name('order_description');
-});
+      //Order Management
+      Route::get('list-all-order','Admin\CmsController@list_all_order')->name('list_all_order');
+      Route::post('update-order-status','Admin\CmsController@update_order_status')->name('update_order_status');
+      Route::get('order-description/{id?}','Admin\CmsController@order_description')->name('order_description');
+  });
 });
 
 Route::get('price-weight','innerController@price_weight')->name('price_weight');
