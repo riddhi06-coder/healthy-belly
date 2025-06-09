@@ -64,7 +64,11 @@ class LoginController extends Controller
         // return redirect()->route('user_login');
 
     }
+
+
     public function adminLogin(Request $req){
+
+        // dd($req);
         $this->validate($req,[
             'email'   => 'required|email',
             'password' => 'required|min:6'
@@ -76,6 +80,7 @@ class LoginController extends Controller
         }
         return back()->withInput($req->only('email', 'remember'));
     }
+
 
     public function userLogin(Request $req){
 
