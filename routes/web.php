@@ -78,6 +78,7 @@ Route::get('login/facebook', 'Auth\FacebookController@redirectToFacebook');
 Route::get('login/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
 
 Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm')->name('admin_login');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/login/staffmember', 'Auth\LoginController@showStaffmemberLoginForm')->name('staffmember_login');
 Route::get('/register/admin', 'Auth\RegisterController@showAdminRegisterForm');
 Route::get('/register/staffmember', 'Auth\RegisterController@showStaffmemberRegisterForm');

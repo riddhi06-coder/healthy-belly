@@ -114,4 +114,32 @@ class LoginController extends Controller
         }
         return back()->withInput($req->only('email', 'remember'));
     }
+
+
+    public function logout(Request $request)
+    {
+        $guard = null;
+
+        if (Auth::guard('admin')->check()) {
+            $guard = 'admin';
+        } elseif (Auth::guard('staffmember')->check()) {
+            $guard = 'staffmember';
+        } else {
+            $guard = 'web';
+        }
+
+        Auth::guard($guard)->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        switch ($guard) {
+            case 'admin':
+                return redirect('/login/admin');
+            case 'staffmember':
+                return redirect('/staffmember/login');
+            default:
+                return redirect('/login/admin'); 
+        }
+    }
 }
